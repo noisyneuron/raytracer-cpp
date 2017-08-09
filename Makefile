@@ -11,7 +11,7 @@ LIBS     = png z
 LDFLAGS  = $(addprefix -l, $(LIBS)) $(addprefix -L, $(LIBDIRS)) 
 
 # sources
-MODULES  = lightbox
+MODULES  = lightbox FastNoise
 SRC      = $(wildcard src/*.cpp) \
            $(foreach m, $(MODULES), $(wildcard src/$(m)/*.cpp))
 OBJ      = $(patsubst src/%.cpp, build/%.o, $(SRC))
